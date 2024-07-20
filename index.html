@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Manba Out!</title>
+  <meta charset="UTF-8">
+  <title>Manba Out!</title>
 </head>
+
 <body>
-    <audio controls autoplay loop>
+  <img src="点击复活.jpg" height="700" onclick="startKobe()"></img>
+  <h2>点我怀念牢大↑</h2>
+  <div>
+    <audio controls autoplay loop id="see_you_again">
       <source src="See You Again(Speed).mp3" type="audio/mpeg">
     </audio>
-    <img src="Kobe.png"></img>
-    <h1>牢大我想你了</h1>
-    <h1>What can I say?</h1>
+  </div>
+  <h1>牢大我想你了</h1>
+  <h1>What can I say?</h1>
+
+  <div>
+    <img src="Kobe.png" width="700"></img>
+    <h2>科比正身照</h2>
+  </div>
+  <div>
+    <img src="耐摔王.jpg" width="700"></img>
+    <h2>耐摔王科比, 耐用一万年</h2>
+  </div>
+  <div>
+    <img src="Kobe.png" width="700"></img>
+    <h2>科比正身照</h2>
+  </div>
+  <div>
+    <img src="赤身.jpg" width="700"></img>
+    <h2>科比因为常年练习导致皮肤黝黑</h2>
+  </div>
+
+  <script type="text/javascript">
+    var kobe_music;
+
+    function startKobe() {
+      if (!kobe_music){
+        kobe_music = document.getElementById("see_you_again");
+      }
+      kobe_music.play();
+    }
+  </script>
 </body>
+
 </html>
