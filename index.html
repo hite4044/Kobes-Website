@@ -7,41 +7,61 @@
 </head>
 
 <body>
+  <h1>科比·布莱恩特</h1>
+  <h3>美国已故篮球运动员</h3>
   <img src="点击复活.jpg" height="700" onclick="startKobe()"></img>
-  <h2>点我怀念牢大↑</h2>
+  <h2>点击怀念牢大</h2>
   <div>
     <audio controls autoplay loop id="see_you_again">
       <source src="See You Again(Speed).mp3" type="audio/mpeg">
     </audio>
   </div>
   <h1>牢大我想你了</h1>
-  <h1>What can I say?</h1>
+  <h1 onclick="playWhatCanISay()">What can I say?</h1>
+
+  <div id="photo_wall">
+    <div onclick="playMan()">
+      <img src="Kobe.png" width="700"></img>
+      <h2>科比正身照</h2>
+    </div>
+    <div onclick="playWhatCanISay()">
+      <img src="耐摔王.jpg" width="700"></img>
+      <h2>耐摔王科比, 耐用一万年</h2>
+    </div>
+    <div>
+      <img src="冰红茶.jpg" width="700"></img>
+      <h2>科比为冰红茶代言</h2>
+    </div>
+    <div onclick="playMan()">
+      <img src="赤身.jpg" width="700"></img>
+      <h2>科比因为常年练习导致皮肤黝黑</h2>
+    </div>
+  </div>
 
   <div>
-    <img src="Kobe.png" width="700"></img>
-    <h2>科比正身照</h2>
+    <audio id="what_can_i_say" style="display: none;">
+      <source src="What can I say.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="man" style="display: none;">
+      <source src="Man.mp3" type="audio/mpeg">
+    </audio>
   </div>
-  <div>
-    <img src="耐摔王.jpg" width="700"></img>
-    <h2>耐摔王科比, 耐用一万年</h2>
-  </div>
-  <div>
-    <img src="Kobe.png" width="700"></img>
-    <h2>科比正身照</h2>
-  </div>
-  <div>
-    <img src="赤身.jpg" width="700"></img>
-    <h2>科比因为常年练习导致皮肤黝黑</h2>
-  </div>
-
   <script type="text/javascript">
     var kobe_music;
 
     function startKobe() {
-      if (!kobe_music){
+      if (!kobe_music) {
         kobe_music = document.getElementById("see_you_again");
       }
       kobe_music.play();
+    }
+    function playMan() {
+      music = document.getElementById("man");
+      music.play()
+    }
+    function playWhatCanISay() {
+      music = document.getElementById("what_can_i_say");
+      music.play()
     }
   </script>
 </body>
